@@ -47,7 +47,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
         
         let size = posts.count - 1
-        
+        //reversing order of the feed to see more recent one up top
         let post = posts[size - indexPath.row]
         let user = post["author"] as! PFUser
         cell.usernameLabel.text = user.username
